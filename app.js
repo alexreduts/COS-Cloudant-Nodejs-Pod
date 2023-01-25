@@ -22,10 +22,10 @@ app.get('/cloudant', (req, res) => {
   
   cloudantDemo.getServerInformation()
     .then(response => {
-      res.send(`Cloudant Readout ${response.result}`)
+      console.log(`Cloudant Readout ${response.result}`)
     })
     .catch(error => {
-      res.send(`Error Message:\n ${error.message}`)
+      console.log(`Error Message:\n ${error.message}`)
     })
 
   res.send(`Welcome have a look at the pod log`)
